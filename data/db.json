@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Self-Awareness",
+      "price": 369,
+      "description": "Self-awareness is the ability to understand your thoughts, emotions, and actions. It helps people recognize their strengths and weaknesses, make better decisions, and improve their relationships with others. Developing self-awareness is an important step toward personal growth and success." ,
+      "image" :  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-i7wYEHpPyVDYos-4fHj9vNE2xMo-pt7poulAx_ksrw&s=10"
+    },
+    {
+      "id": "2",
+      "title": "Public Awareness",
+      "price": 169,
+      "description": "Public awareness helps people learn about important social issues and encourages positive change. Campaigns about health, safety, and education can inspire communities to take action and make informed decisions. An informed society is stronger and more responsible." ,
+      "image" :  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReHc58NvNdFGMU19a1QzBvIEZtaMmge9PU0UW4Kl_QGR8VcqGmv0wb_mw&s=10"
+    },
+    {
+      "id": "3",
+      "title": "Health Awareness",
+      "price": 269,
+      "description": "Health awareness encourages people to take care of their physical and mental well-being. Healthy habits such as eating nutritious food, exercising regularly, and getting enough sleep can prevent many diseases. Small daily choices can lead to a healthier life." ,
+      "image" :  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT7qY75kg7wGbnmZdSY_KPmyE16samOpzPWUSnxOcINGW4NqeweUqnFZ8&s=10"
+    },
+    {
+      "id": "4",
+      "title": "Social Awareness",
+      "price": 99,
+      "description": "Social awareness means understanding the feelings and needs of other people. It promotes kindness, respect, and cooperation in families, schools, and workplaces. Being socially aware helps create stronger communities and better relationships." ,
+      "image" :  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfglOK_uO0ANXs1dwDkSW8O1pk-n8CQPRXKt4KXmE0Bp9j0mc-rG01eJNU&s=10"
+    }
+  ]
+}
