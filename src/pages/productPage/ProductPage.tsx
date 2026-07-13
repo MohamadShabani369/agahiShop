@@ -16,9 +16,8 @@ function ProductPage() {
   } = useShopingCartContext();
 
   console.log(cartItem);
-
   const params = useParams<{ id: string }>();
-  const param = Number(params.id)
+  const param = Number(params.id);
 
   const [Product, setProduct] = useState<Iproducts>();
 
@@ -59,9 +58,9 @@ function ProductPage() {
                 >
                   +
                 </Button>
-                <p className="flex justify-center items-center mt-4">
+                <div className="mt-4 flex items-center justify-center rounded-lg border border-slate-300 bg-slate-100 text-lg font-bold text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-white">
                   {getProductQty(param)}
-                </p>
+                </div>
                 <Button
                   onClick={() => {
                     handleDecreaseQty(param);
