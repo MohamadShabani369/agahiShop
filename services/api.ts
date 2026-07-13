@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const client = axios.create({ baseURL: "http://localhost:8001" });
+const client = axios.create({ baseURL: "https://agahishop-api.onrender.com" });
 
 export async function getProducts() {
   const { data } = await client.get("/products");
