@@ -13,17 +13,13 @@ function Store() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-
-    setTimeout(() => {
-      getProducts()
-        .then((res) => {
-          setProducts(res);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }, 2000);
+    getProducts()
+      .then((res) => {
+        setProducts(res);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   const filteredProducts = products.filter((product) =>
