@@ -8,7 +8,7 @@ type Props = {
 
 function CreditCard({ cardNumber, cardHolder, expiry, cvv, isFlipped }: Props) {
   return (
-    <div className="my-8 h-56 w-full perspective:1000px">
+    <div className="my-8 h-61 sm:h-64 w-full perspective:1000px">
       <div
         className={`relative h-full w-full transition-transform duration-700 transform-style:preserve-3d ${
           isFlipped ? "rotate-y-180" : ""

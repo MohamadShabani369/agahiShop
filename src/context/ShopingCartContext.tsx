@@ -5,6 +5,7 @@ import { login } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { getProducts } from "../../services/api";
 import type { Iproducts } from "../types/server";
+import toast from "react-hot-toast";
 
 interface ShopingCartProvider {
   children: React.ReactNode;
@@ -27,6 +28,15 @@ export function ShopingCartProvider({ children }: ShopingCartProvider) {
           }
         });
       }
+    });
+    toast.success("Added to cart 🛒", {
+      duration: 1800,
+      position : "top-left",
+      style: {
+        background: "#10b981",
+        color: "#fff",
+        borderRadius: "12px",
+      },
     });
   };
 
@@ -88,7 +98,7 @@ export function ShopingCartProvider({ children }: ShopingCartProvider) {
   }, []);
   const getSubtotal = () => {
     return cartItem.reduce((total, item) => {
-      const product = products.find((p) =>Number(p.id)  === (item.id) );
+      const product = products.find((p) => Number(p.id) === item.id);
 
       console.log("Product:", product);
       console.log("Item:", item);
@@ -108,8 +118,8 @@ export function ShopingCartProvider({ children }: ShopingCartProvider) {
   };
 
   const clearCart = () => {
-  setCartItem([]);
-};
+    setCartItem([]);
+  };
   return (
     <ShopingCartContext.Provider
       value={{

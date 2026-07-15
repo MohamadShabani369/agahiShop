@@ -1,77 +1,128 @@
-# React + TypeScript + Vite
+# 🛍️ Agahi Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern E-commerce web application built with **React**, **TypeScript**, and **Vite**.
 
-Currently, two official plugins are available:
+This project focuses on creating a clean shopping experience with a responsive UI, modern animations, and a multi-step checkout process.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+🔗 https://agahi-shop.vercel.app
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🛒 Shopping Cart with Context API
+- 🔍 Product Search
+- 🌙 Dark Mode
+- 📱 Fully Responsive Design
+- 💳 Multi-Step Checkout
+  - Shipping
+  - Payment
+  - Review
+- 💳 Interactive Credit Card Preview
+- 🔄 Card Flip Animation (CVV)
+- ✅ Order Success Page
+- 🍞 Beautiful Toast Notifications
+- 💀 Skeleton Loading
+- 🚫 Custom 404 Page
+- 🔐 Fake Login Authentication
+- 💾 LocalStorage Persistence
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Built With
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Context API
+- Axios
+- React Hot Toast
+- Lucide React
 
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── components/
+├── context/
+├── hooks/
+├── pages/
+├── services/
+├── types/
+└── assets/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository
 
+```bash
+git clone https://github.com/your-username/agahishop.git
 ```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the project
+
+```bash
+npm run dev
+```
+
+---
+
+## 📦 Build
+
+```bash
+npm run build
+```
+
+---
+
+## 📖 What I Learned
+
+During this project I practiced:
+
+- Component Architecture
+- React Context API
+- Custom Hooks
+- Responsive UI Design
+- Multi-step Forms
+- State Management
+- LocalStorage
+- Modern UI/UX Design
+- Reusable Components
+- API Integration
+
+---
+
+## 🎯 Future Improvements
+
+- Product Categories
+- Sorting & Filtering
+- Wishlist
+- Real Authentication
+- Backend Integration
+- Order History
+- Stripe Payment
+- Unit Testing
+
+---
+
+## 👨‍💻 Author
+
+**Mohammad Shabani**

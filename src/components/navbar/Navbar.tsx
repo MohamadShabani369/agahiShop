@@ -4,16 +4,27 @@ import { useShopingCartContext } from "../../context/createContext";
 import Button from "../button/Button";
 import { Moon, ShoppingCart, Sun } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
+import { useEffect, useRef, useState } from "react";
 
 function Navbar() {
   const { cartQty, handleLogOut, isLogin } = useShopingCartContext();
   const { isDark, toggleTheme } = useTheme();
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const previousQty = useRef(cartQty);
+
+  useEffect(() => {
+    if (cartQty > previousQty.current) {
+      setAnimationKey((prev) => prev + 1);
+    }
+
+    previousQty.current = cartQty;
+  }, [cartQty]);
 
   return (
     <header className="sticky top-0 z-50 border-b bg-white/90 shadow-md backdrop-blur-md transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900/90">
       <Container>
         <div className="flex h-16 items-center">
-
           {/* Menu */}
           <ul className="flex items-center gap-8 font-semibold">
             <li>
@@ -40,7 +51,6 @@ function Navbar() {
 
           {/* Right Side */}
           <div className="flex items-center gap-3">
-
             <Link
               to="/cart"
               className="group relative flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-300 hover:bg-gray-200 dark:hover:bg-slate-800"
@@ -51,7 +61,10 @@ function Navbar() {
               />
 
               {cartQty > 0 && (
-                <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white shadow">
+                <span
+                  key={animationKey}
+                  className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white shadow animate-cart-pop"
+                >
                   {cartQty > 99 ? "99+" : cartQty}
                 </span>
               )}
@@ -75,16 +88,11 @@ function Navbar() {
             </button>
 
             {isLogin && (
-              <Button
-                size="sm"
-                variant="danger"
-                onClick={handleLogOut}
-              >
+              <Button size="sm" variant="danger" onClick={handleLogOut}>
                 Logout
               </Button>
             )}
           </div>
-
         </div>
       </Container>
     </header>
